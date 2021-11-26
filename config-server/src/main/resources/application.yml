@@ -1,0 +1,11 @@
+server:
+  port: ${PORT:8888}                                #配置工程端口号
+spring:
+  application:
+    name: config-server                     #设置该服务应用名称
+  profiles:
+    active: native                                 #设置读取为本地工程文件
+  config:
+    server:
+      native:
+        searchLocations: classpath:/config       #配置文件根目录，也就是XXX-dev.properties等的目录

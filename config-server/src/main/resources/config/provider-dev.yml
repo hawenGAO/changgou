@@ -1,0 +1,15 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: Provider
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        register: true
+logging:
+  level:
+    org.apache.zookeeper.ClientCnxn: WARN

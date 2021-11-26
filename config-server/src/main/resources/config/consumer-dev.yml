@@ -1,0 +1,15 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: Consumer
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    zookeeper:
+      discovery:
+        enabled: true
+      connect-string: localhost:2181
+logging:
+  level:
+    org.apache.zookeeper.ClientCnxn: WARN
